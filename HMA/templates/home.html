@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% load static %}
+    <link rel="stylesheet" href={% static 'home.css' %}>
+    <title>Hospital Management System</title>
+</head>
+<body method="post">
+    <h1>Welcome to Hospital Management System</h1>
+    <ul class="nav">
+        <li><a href="{% url 'register' %}">Register</a></li>
+        <li><a href="{% url 'login' %}">Login</a></li>
+        <li><a href="{% url 'patients' %}">Patients</a></li>
+        <li><a href="{% url 'doctors' %}">Doctors</a></li>
+        <li><a href="{% url 'appointments' %}">Appointments</a></li>
+        <li><a href="{% url 'add_patient' %}">add_patient</a></li>
+        <li><a href="{% url 'add_doctor' %}">add_doctor</a></li>
+        <li><a href="{% url 'add_appointment' %}">add_appointment</a></li>
+    </ul>
+</body>
+</html>
+{% comment %}
+
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+
+<h1>Welcome to Hospital Management System</h1>
+<ul>
+    <li><a href="{% url 'patients' %}">Patients</a></li>
+    <li><a href="{% url 'doctors' %}">Doctors</a></li>
+    <li><a href="{% url 'appointments' %}">Appointments</a></li>
+    <li><a href="{% url 'register' %}">Register</a></li>
+    <li><a href="{% url 'login' %}">Login</a></li>
+</ul>
+{% endblock %}
+{% endcomment %}

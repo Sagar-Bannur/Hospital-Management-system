@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Patient</title>
+</head>
+<body>
+    <h1>Add Patient</h1>
+    <form action="" method="POST" enctype="multipart/form-data" style="" >
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Add Patient</button>
+    </form>
+    <a href="{% url 'patients' %}">Back to Patients</a>
+</body>
+</html>

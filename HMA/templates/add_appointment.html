@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Appointment</title>
+</head>
+<body>
+    <h1>Add Appointment</h1>
+    <form action="" method="POST" enctype="multipart/form-data" style="" >
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Add Appointment</button>
+    </form>
+    <a href="{% url 'appointments' %}">Back to Appointments</a>
+</body>
+</html>
